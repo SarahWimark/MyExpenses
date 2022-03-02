@@ -4,9 +4,10 @@ import "./ExpenseForm.css";
 export const ExpenseForm = () => {
   const [userInput, setUserInput] = useState({
     title: "",
-    amount: "",
-    date: "",
+    amount: null,
+    date: null,
   });
+  const { title, amount, date } = userInput;
 
   const onTitleChange = (event) => {
     setUserInput((prevState) => {
@@ -26,8 +27,19 @@ export const ExpenseForm = () => {
     });
   };
 
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    const expenseData = {
+      title,
+      amount,
+      date: new Date(date),
+    };
+    console.log(expenseData);
+  };
+
   return (
-    <form action="">
+    <form onSubmit={onSubmit}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label htmlFor="title">Title</label>
