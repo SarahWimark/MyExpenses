@@ -2,29 +2,20 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 
 export const ExpenseForm = () => {
-  const [userInput, setUserInput] = useState({
-    title: "",
-    amount: null,
-    date: null,
-  });
-  const { title, amount, date } = userInput;
+  const [title, setTitle] = useState("");
+  const [amount, setAmount] = useState("");
+  const [date, setDate] = useState("");
 
   const onTitleChange = (event) => {
-    setUserInput((prevState) => {
-      return { ...prevState, title: event.target.value };
-    });
+    setTitle(event.target.value);
   };
 
   const onAmountChange = (event) => {
-    setUserInput((prevState) => {
-      return { ...prevState, amount: event.target.value };
-    });
+    setAmount(event.target.value);
   };
 
   const onDateChange = (event) => {
-    setUserInput((prevState) => {
-      return { ...prevState, date: event.target.value };
-    });
+    setDate(event.target.value);
   };
 
   const onSubmit = (event) => {
@@ -35,7 +26,10 @@ export const ExpenseForm = () => {
       amount,
       date: new Date(date),
     };
-    console.log(expenseData);
+
+    setTitle("");
+    setAmount("");
+    setDate("");
   };
 
   return (
@@ -43,7 +37,13 @@ export const ExpenseForm = () => {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label htmlFor="title">Title</label>
-          <input type="text" name="title" id="title" onChange={onTitleChange} />
+          <input
+            type="text"
+            name="title"
+            id="title"
+            onChange={onTitleChange}
+            value={title}
+          />
         </div>
         <div className="new-expense__control">
           <label htmlFor="amount">Amount</label>
@@ -54,6 +54,7 @@ export const ExpenseForm = () => {
             min={0.01}
             step={0.01}
             onChange={onAmountChange}
+            value={amount}
           />
         </div>
         <div className="new-expense__control">
@@ -65,6 +66,7 @@ export const ExpenseForm = () => {
             min="2019-01-01"
             max="2024-12-31"
             onChange={onDateChange}
+            value={date}
           />
         </div>
       </div>
