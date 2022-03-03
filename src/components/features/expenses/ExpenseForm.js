@@ -27,9 +27,9 @@ export const ExpenseForm = () => {
       date: new Date(date),
     };
 
-    setTitle("");
+    /* setTitle("");
     setAmount("");
-    setDate("");
+    setDate(""); */
   };
 
   return (
