@@ -25,9 +25,13 @@ export const App = () => {
     },
   ];
 
+  const addExpense = (data) => {
+    "Expense added";
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense addExpense={addExpense} />
       <Expenses items={expenses} />
     </div>
   );
