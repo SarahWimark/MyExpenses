@@ -29,7 +29,7 @@ export const App = () => {
 
   const addExpense = (expense) => {
     setExpenses((prevExpenses) => {
-      return [expense, ...prevExpenses];
+      return [...prevExpenses, expense];
     });
   };
 
