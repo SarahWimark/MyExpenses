@@ -5,18 +5,22 @@ import { ExpenseFilter } from "../components/ExpenseFilter";
 
 import "./Expenses.css";
 
-export const Expenses = ({ items }) => {
+export const Expenses = ({ expenses }) => {
   const [year, setYear] = useState(2020);
 
   const onYearChange = (year) => {
     setYear(year);
   };
 
+  const filteredExpenses = expenses.filter((expense) => {
+    return expense.date.getFullYear().toString() === year;
+  });
+
   return (
     <>
       <Card className="expenses">
         <ExpenseFilter value={year} onYearChange={onYearChange} />
-        {items.map((expense) => (
+        {filteredExpenses.map((expense) => (
           <ExpenseItem
             title={expense.title}
             amount={expense.amount}

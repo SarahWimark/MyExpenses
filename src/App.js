@@ -36,7 +36,7 @@ export const App = () => {
   return (
     <div>
       <NewExpense addExpense={addExpense} />
-      <Expenses items={expenses} />
+      <Expenses expenses={expenses} />
     </div>
   );
 };
