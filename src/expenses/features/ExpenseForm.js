@@ -23,7 +23,7 @@ export const ExpenseForm = ({ onSave, onCancel }) => {
 
     const expenseData = {
       title,
-      amount,
+      amount: +amount,
       date: new Date(date),
     };
 
