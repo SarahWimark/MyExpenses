@@ -11,6 +11,7 @@ export const NewExpense = ({ addExpense }) => {
       id: uuidv4(), // generates a unique id
     };
     addExpense(expenseData);
+    setIsEditing(false);
   };
 
   const startEditing = () => {

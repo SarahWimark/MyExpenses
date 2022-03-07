@@ -5,7 +5,7 @@ import { ExpenseFilter } from "../components/ExpenseFilter";
 import "./Expenses.css";
 
 export const Expenses = ({ expenses }) => {
-  const [year, setYear] = useState(2020);
+  const [year, setYear] = useState(2022);
 
   const onYearChange = (year) => {
     setYear(year);
