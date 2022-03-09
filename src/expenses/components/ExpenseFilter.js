@@ -9,7 +9,7 @@ export const ExpenseFilter = ({ onYearChange, value }) => {
 
   return (
     <div className="expense-filter">
-      <div className="expense-filter__control">
+      <div className="expense-filter-control">
         <label>Filter by year</label>
         <select value={value} onChange={onFilterChange}>
           <option value="2022">2022</option>
