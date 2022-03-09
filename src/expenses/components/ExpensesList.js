@@ -4,7 +4,7 @@ import "./ExpensesList.css";
 
 export const ExpensesList = ({ expenses }) => {
   if (expenses.length === 0) {
-    return <h2 className="expense-list__fallback">Found no expenses.</h2>;
+    return <h2 className="expense-list-fallback">Found no expenses.</h2>;
   }
 
   return (
