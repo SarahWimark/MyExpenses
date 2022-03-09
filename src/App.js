@@ -22,6 +22,12 @@ const DUMMY_DATA = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
+  {
+    id: "e5",
+    title: "Book",
+    amount: 11.99,
+    date: new Date(2022, 3, 1),
+  },
 ];
 
 export const App = () => {
