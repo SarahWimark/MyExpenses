@@ -35,8 +35,8 @@ export const ExpenseForm = ({ onSave, onCancel }) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <div className="new-expense__controls">
-        <div className="new-expense__control">
+      <div className="new-expense-controls">
+        <div className="new-expense-control">
           <label htmlFor="title">Title</label>
           <input
             type="text"
@@ -46,7 +46,7 @@ export const ExpenseForm = ({ onSave, onCancel }) => {
             value={title}
           />
         </div>
-        <div className="new-expense__control">
+        <div className="new-expense-control">
           <label htmlFor="amount">Amount</label>
           <input
             type="number"
@@ -58,7 +58,7 @@ export const ExpenseForm = ({ onSave, onCancel }) => {
             value={amount}
           />
         </div>
-        <div className="new-expense__control">
+        <div className="new-expense-control">
           <label htmlFor="date">Date</label>
           <input
             type="date"
@@ -71,7 +71,7 @@ export const ExpenseForm = ({ onSave, onCancel }) => {
           />
         </div>
       </div>
-      <div className="new-expense__actions">
+      <div className="new-expense-actions">
         <button type="button" onClick={onCancel}>
           Cancel
         </button>
