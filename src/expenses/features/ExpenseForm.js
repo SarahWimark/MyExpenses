@@ -75,7 +75,7 @@ export const ExpenseForm = ({ onSave, onCancel }) => {
         <button type="button" onClick={onCancel}>
           Cancel
         </button>
-        <button type="submit">Add expense</button>
+        <button type="submit">Add Expense</button>
       </div>
     </form>
   );

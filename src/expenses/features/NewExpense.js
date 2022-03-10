@@ -24,7 +24,7 @@ export const NewExpense = ({ addExpense }) => {
 
   return (
     <div className="new-expense">
-      {!isEditing && <button onClick={startEditing}>Add New Expense</button>}
+      {!isEditing && <button onClick={startEditing}>Add Expense</button>}
       {isEditing && (
         <ExpenseForm onSave={onSaveNewExpense} onCancel={stopEditing} />
       )}

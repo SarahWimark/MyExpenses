@@ -6,7 +6,7 @@ import { ExpensesChart } from "./ExpensesChart";
 import "./Expenses.css";
 
 export const Expenses = ({ expenses }) => {
-  const [year, setYear] = useState(2022);
+  const [year, setYear] = useState(2020);
 
   const onYearChange = (year) => {
     setYear(year);
